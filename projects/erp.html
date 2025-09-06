@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEC Study Group App Showcase</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+        color: #fff;
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      header {
+        background: linear-gradient(90deg, #1a2a6c, #2c3e50);
+        padding: 25px;
+        text-align: center;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: #fdbb2d;
+        margin-bottom: 15px;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .app-desc {
+        max-width: 600px;
+        text-align: left;
+      }
+
+      .app-desc h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        color: #fdbb2d;
+      }
+
+      .app-desc p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .download-btn {
+        background: linear-gradient(90deg, #fdbb2d, #f46b45);
+        color: #1a2a6c;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .showcase {
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .showcase-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #fdbb2d;
+        position: relative;
+        display: inline-block;
+      }
+
+      .showcase-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #fdbb2d, #f46b45);
+        border-radius: 2px;
+      }
+
+      .slider-container {
+        position: relative;
+        margin: 40px auto;
+        max-width: 1000px;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hand-mockup {
+        position: relative;
+        width: 600px;
+        height: 600px;
+      }
+
+      .hand {
+        width: 100%;
+        height: 100%;
+        background: url("https://i.imgur.com/3Q7Y4Qj.png") no-repeat center
+          center;
+        background-size: contain;
+        position: relative;
+        z-index: 2;
+      }
+
+      .phone-screen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 260px;
+        height: 520px;
+        background: white;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      .screen-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+
+      .app-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider-nav {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .slider-dot {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        margin: 0 8px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      .slider-dot.active {
+        background: #fdbb2d;
+        transform: scale(1.3);
+      }
+
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+        z-index: 10;
+      }
+
+      .slider-btn:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .slider-btn.prev {
+        left: 20px;
+      }
+
+      .slider-btn.next {
+        right: 20px;
+      }
+
+      .features {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .features-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #fdbb2d;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 15px;
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: #fdbb2d;
+        margin-bottom: 20px;
+      }
+
+      .feature-heading {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .feature-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ddd;
+      }
+
+      footer {
+        background: linear-gradient(90deg, #1a2a6c, #2c3e50);
+        padding: 25px;
+        text-align: center;
+        font-size: 1rem;
+        color: #fdbb2d;
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .app-desc {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .hand-mockup {
+          width: 400px;
+          height: 400px;
+        }
+
+        .phone-screen {
+          width: 180px;
+          height: 360px;
+        }
+
+        .slider-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">MEC STUDY GROUP</div>
+        <div class="tagline">Your dream begins here</div>
+
+        <div class="header-content">
+          <div class="app-desc">
+            <h1>Find Your Perfect Course</h1>
+            <p>
+              Discover over 63,950 courses from top universities worldwide. We
+              help you find the right courses and institutions for your academic
+              journey.
+            </p>
+            <button class="download-btn">Download App Now</button>
+          </div>
+
+          <div class="app-stats">
+            <div class="stat">
+              <h2>63,950+</h2>
+              <p>Courses Available</p>
+            </div>
+            <div class="stat">
+              <h2>120+</h2>
+              <p>Partner Institutions</p>
+            </div>
+            <div class="stat">
+              <h2>6</h2>
+              <p>Countries</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="showcase">
+        <h2 class="showcase-title">App Experience</h2>
+        <p>
+          Explore our intuitive mobile application designed to help students
+          find their perfect educational path
+        </p>
+
+        <div class="slider-container">
+          <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="hand-mockup">
+                <div class="hand"></div>
+                <div class="phone-screen">
+                  <div class="screen-content">
+                    <img
+                      src="/Users/rafid/Desktop/portfolio website/personal-website/assets/img/mec/1.png"
+                      alt="MEC Study Group App"
+                      class="app-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="hand-mockup">
+                <div class="hand"></div>
+                <div class="phone-screen">
+                  <div class="screen-content">
+                    <img
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                      alt="MEC Study Group App"
+                      class="app-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="hand-mockup">
+                <div class="hand"></div>
+                <div class="phone-screen">
+                  <div class="screen-content">
+                    <img
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                      alt="MEC Study Group App"
+                      class="app-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div class="hand-mockup">
+                <div class="hand"></div>
+                <div class="phone-screen">
+                  <div class="screen-content">
+                    <img
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                      alt="MEC Study Group App"
+                      class="app-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-btn prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="features-title">Key Features</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="feature-heading">Find Courses</h3>
+            <p class="feature-desc">
+              Search from over 63,950 courses by subject or university to find
+              your perfect match.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="feature-heading">Discover Universities</h3>
+            <p class="feature-desc">
+              Explore top universities worldwide with detailed information and
+              rankings.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 class="feature-heading">Personalized Experience</h3>
+            <p class="feature-desc">
+              Create an account to save your preferences and get course
+              recommendations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 MEC Study Group. All rights reserved.</p>
+        <p>Helping students find their educational path since 2025</p>
+      </footer>
+    </div>
+
+    <script>
+      // Slider functionality
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".slider-dot");
+      const prevBtn = document.querySelector(".slider-btn.prev");
+      const nextBtn = document.querySelector(".slider-btn.next");
+      let currentIndex = 0;
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      // Next slide
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      });
+
+      // Previous slide
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+
+      // Click on dot
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          updateSlider();
+        });
+      });
+
+      // Auto slide every 5 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      }, 5000);
+
+      // Simple animation for the download button
+      document
+        .querySelector(".download-btn")
+        .addEventListener("mouseover", function () {
+          this.style.transform = "scale(1.05)";
+        });
+
+      document
+        .querySelector(".download-btn")
+        .addEventListener("mouseout", function () {
+          this.style.transform = "scale(1)";
+        });
+
+      // Add subtle animation to feature cards
+      const features = document.querySelectorAll(".feature-card");
+      features.forEach((feature) => {
+        feature.addEventListener("mouseover", function () {
+          this.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 0.2)";
+        });
+
+        feature.addEventListener("mouseout", function () {
+          this.style.boxShadow = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
