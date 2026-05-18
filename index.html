@@ -45,7 +45,6 @@
     <link href="assets/css/main.css" rel="stylesheet" />
 
     <style>
-      /* Additional custom styles */
       .portfolio-content {
         border-radius: 12px;
         overflow: hidden;
@@ -53,36 +52,62 @@
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease;
+        background: var(--surface-color);
       }
       .portfolio-content:hover {
         transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       }
+      .project-details {
+        padding: 20px;
+      }
+      .project-details h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: var(--heading-color);
+      }
+      .project-tech {
+        font-size: 11px;
+        color: var(--accent-color);
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .project-desc {
+        font-size: 13px;
+        color: var(--default-color);
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+      .project-features {
+        font-size: 12px;
+        padding-left: 16px;
+        margin-bottom: 12px;
+      }
+      .project-features li {
+        margin-bottom: 4px;
+      }
       .project-links {
-        margin-top: 12px;
         display: flex;
         gap: 8px;
-        justify-content: center;
         flex-wrap: wrap;
+        margin-top: 10px;
       }
       .project-links a {
-        font-size: 12px;
+        font-size: 11px;
         padding: 4px 10px;
         border-radius: 20px;
         background: var(--accent-color);
         color: white;
         transition: 0.3s;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
       }
       .project-links a:hover {
         background: color-mix(in srgb, var(--accent-color), transparent 20%);
         color: white;
-      }
-      .company-link {
-        display: inline-block;
-        margin-right: 8px;
-        font-size: 14px;
       }
       .resume-item ul li {
         margin-bottom: 8px;
@@ -98,18 +123,23 @@
           font-size: 18px;
         }
       }
-      .cert-badge {
-        background: var(--accent-color);
-        color: white;
-        padding: 5px 12px;
-        border-radius: 25px;
-        font-size: 12px;
-        display: inline-block;
-        margin-top: 8px;
+      .portfolio-info {
+        position: relative !important;
+        opacity: 1 !important;
+        background: var(--surface-color) !important;
+        padding: 15px !important;
       }
-      .cert-badge a {
-        color: white;
-        text-decoration: underline;
+      .portfolio .portfolio-content:hover .portfolio-info {
+        opacity: 1;
+      }
+      .portfolio .portfolio-content img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .modal-content {
+        background: var(--surface-color);
+        border-radius: 12px;
       }
     </style>
   </head>
@@ -117,7 +147,6 @@
   <body class="index-page">
     <header id="header" class="header dark-background d-flex flex-column">
       <i class="header-toggle d-xl-none bi bi-list"></i>
-
       <div class="profile-img">
         <img
           src="assets/img/dpp.jpg"
@@ -125,47 +154,31 @@
           class="img-fluid rounded-circle"
         />
       </div>
-
       <a
         href="index.html"
         class="logo d-flex align-items-center justify-content-center"
       >
         <h1 class="sitename">Rafid Tawhid</h1>
       </a>
-
       <div class="social-links text-center">
-        <a
-          href="https://github.com/Rafid-tawhid"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://github.com/Rafid-tawhid" target="_blank"
           ><i class="bi bi-github"></i
         ></a>
-        <a
-          href="https://www.facebook.com/RAFI5D/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://www.facebook.com/RAFI5D/" target="_blank"
           ><i class="bi bi-facebook"></i
         ></a>
-        <a
-          href="https://wa.me/8801682832598"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://wa.me/8801682832598" target="_blank"
           ><i class="bi bi-whatsapp"></i
         ></a>
-        <a
-          href="https://join.skype.com/invite/r08TlCJmjogh"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://join.skype.com/invite/r08TlCJmjogh" target="_blank"
           ><i class="bi bi-skype"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/tawhidur-rahman-rafid-5a6b75175/"
           target="_blank"
-          rel="noopener noreferrer"
           ><i class="bi bi-linkedin"></i
         ></a>
       </div>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li>
@@ -211,10 +224,6 @@
             <span
               class="typed"
               data-typed-items="Flutter Developer, Software Engineer, ERP Solutions Architect, Mobile App Specialist"
-            ></span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
             ></span>
           </p>
         </div>
@@ -227,11 +236,11 @@
           <p>
             Mobile Application & ERP Solutions Engineer with 4+ years of
             experience developing scalable Flutter applications, enterprise ERP
-            systems, and manufacturing workflow automation solutions. Passionate
-            about clean architecture and solving complex business challenges.
+            systems, and manufacturing workflow automation solutions. Skilled in
+            Flutter, Dart, Kotlin, ASP.NET Core Web API, REST APIs, WebSocket,
+            Firebase, Supabase, and real-time systems.
           </p>
         </div>
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
             <div class="col-lg-4">
@@ -244,10 +253,10 @@
             <div class="col-lg-8 content">
               <h2>Software Engineer &amp; Flutter Developer</h2>
               <p class="fst-italic py-3">
-                Skilled Flutter developer with 4+ years of experience creating
-                efficient, cross-platform mobile applications and ERP systems.
-                Proficient in Dart, Riverpod, Firebase, Supabase, and .NET Core
-                API integration.
+                4+ years of experience in Flutter, ERP systems, and
+                manufacturing workflow automation. Experienced in building
+                high-performance mobile, TV, and reporting applications for
+                production monitoring and business automation.
               </p>
               <div class="row">
                 <div class="col-lg-6">
@@ -260,9 +269,8 @@
                       <i class="bi bi-chevron-right"></i>
                       <strong>GitHub:</strong>
                       <a href="https://github.com/Rafid-tawhid" target="_blank"
-                        >github.com/Rafid-tawhid
-                        <i class="bi bi-box-arrow-up-right"></i
-                      ></a>
+                        >github.com/Rafid-tawhid</a
+                      >
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
@@ -296,14 +304,6 @@
                   </ul>
                 </div>
               </div>
-              <p class="py-3">
-                As a Flutter developer, my goal is to create seamless,
-                high-performance, and visually appealing cross-platform
-                applications that enhance user experiences. I focus on
-                delivering efficient, maintainable code while continuously
-                learning and improving to meet both user needs and business
-                objectives.
-              </p>
             </div>
           </div>
         </div>
@@ -322,7 +322,7 @@
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p><strong>Happy Clients</strong> <span>Worldwide</span></p>
+                <p><strong>Happy Clients</strong></p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -334,7 +334,7 @@
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p><strong>Projects</strong> <span>Completed</span></p>
+                <p><strong>Projects Completed</strong></p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -346,9 +346,7 @@
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>
-                  <strong>Hours Of Support</strong> <span>For Clients</span>
-                </p>
+                <p><strong>Hours Support</strong></p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -360,7 +358,7 @@
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p><strong>Years Experience</strong> <span>In Flutter</span></p>
+                <p><strong>Years Experience</strong></p>
               </div>
             </div>
           </div>
@@ -371,10 +369,7 @@
       <section id="skills" class="skills section light-background">
         <div class="container section-title" data-aos="fade-up">
           <h2>Skills</h2>
-          <p>
-            Proficiency in Flutter, Dart, state management, REST API
-            integration, Firebase, and backend technologies.
-          </p>
+          <p>Technical expertise and proficiencies</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row skills-content skills-animation">
@@ -404,12 +399,19 @@
                   <div class="progress-bar" style="width: 80%"></div>
                 </div>
               </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span>Kotlin & Java</span> <i class="val">70%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+              </div>
             </div>
             <div class="col-lg-6">
               <div class="progress">
                 <span class="skill"
-                  ><span>State Management (Riverpod/Provider)</span>
-                  <i class="val">85%</i></span
+                  ><span>Provider & Riverpod</span> <i class="val">85%</i></span
                 >
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 85%"></div>
@@ -425,7 +427,15 @@
               </div>
               <div class="progress">
                 <span class="skill"
-                  ><span>UI/UX Design</span> <i class="val">85%</i></span
+                  ><span>MySQL & Database</span> <i class="val">70%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill"
+                  ><span>Git & GitHub</span> <i class="val">85%</i></span
                 >
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" style="width: 85%"></div>
@@ -436,14 +446,11 @@
         </div>
       </section>
 
-      <!-- Resume Section with Company Links -->
+      <!-- Resume Section -->
       <section id="resume" class="resume section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
-          <p>
-            4+ years of experience in Flutter development, ERP solutions, and
-            mobile application architecture.
-          </p>
+          <p>Professional journey and qualifications</p>
         </div>
         <div class="container">
           <div class="row">
@@ -453,9 +460,10 @@
                 <h4>Tawhidur Rahman Rafid</h4>
                 <p>
                   <em
-                    >Experienced Flutter Developer and ERP Solutions Engineer
-                    with a strong track record of delivering high-performance
-                    mobile apps and enterprise workflow automation systems.</em
+                    >Mobile Application & ERP Solutions Engineer with 4+ years
+                    of experience developing scalable Flutter applications,
+                    enterprise ERP systems, and manufacturing workflow
+                    automation solutions.</em
                   >
                 </p>
               </div>
@@ -473,15 +481,23 @@
                 <p>CGPA: 3.70</p>
               </div>
               <div class="resume-item">
+                <h4>Higher Secondary Certificate (HSC)</h4>
+                <h5>2013 - 2015</h5>
+                <p><em>Birshreshtha Munshi Abdur Rouf Public College</em></p>
+                <p>GPA: 4.00</p>
+              </div>
+              <div class="resume-item">
                 <h4>Certifications</h4>
                 <p>
-                  • Oracle Certified Professional (OCP) Java SE8 (2020)<br />
-                  • <strong>Level-4 Certified Trainer</strong> -
+                  • Oracle Certified Professional (OCP) Java SE8 (2020)<br />•
+                  <strong>Level-4 Certified Trainer</strong> -
                   <a
                     href="https://drive.google.com/file/d/1sKuqkN4pKd4IGnbDW_y-jlVXzuAaHZ3a/view?usp=sharing"
                     target="_blank"
-                    >View Certificate <i class="bi bi-box-arrow-up-right"></i
-                  ></a>
+                    >View Certificate
+                    <i class="bi bi-box-arrow-up-right"></i></a
+                  ><br />• BITM, BASIS Institute - Android Application
+                  Development
                 </p>
               </div>
             </div>
@@ -500,15 +516,16 @@
                 <ul>
                   <li>
                     Designing scalable Flutter-based ERP systems for
-                    manufacturing workflows
+                    manufacturing workflows (production tracking, procurement,
+                    QMS, KANBAN)
                   </li>
                   <li>
                     Building RESTful APIs using .NET Core for real-time data
-                    processing
+                    processing and automation
                   </li>
                   <li>
-                    Leading end-to-end workflow digitization and system
-                    optimization
+                    Developing mobile, desktop, and TV dashboards for production
+                    monitoring
                   </li>
                 </ul>
               </div>
@@ -524,8 +541,8 @@
                 </p>
                 <ul>
                   <li>
-                    Built high-performance mobile apps with real-time tracking
-                    and push notifications
+                    Built high-performance mobile apps with real-time tracking,
+                    push notifications, and AI-powered tools
                   </li>
                   <li>
                     Integrated Firebase, REST APIs, WebSocket for enhanced
@@ -544,9 +561,12 @@
                   ></em>
                 </p>
                 <ul>
-                  <li>Developed professional apps with clean architecture</li>
                   <li>
-                    Solved complex technical challenges for improved user
+                    Developed professional apps with clean architecture and
+                    maintainability focus
+                  </li>
+                  <li>
+                    Solved complex technical challenges to improve user
                     experience
                   </li>
                 </ul>
@@ -563,34 +583,27 @@
                 </p>
                 <ul>
                   <li>
-                    Conducted hands-on training on Flutter and Android for 200+
-                    students
+                    Conducted hands-on training on Flutter and Android
+                    development for 200+ students
+                  </li>
+                  <li>
+                    Mentored aspiring developers to complete industry-standard
+                    projects
                   </li>
                 </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Intern – Java Mobile Developer</h4>
-                <h5>Mar 2021 - Jun 2021</h5>
-                <p>
-                  <em
-                    ><a href="https://appatlantis.tech/" target="_blank"
-                      >App Atlantis Co
-                      <i class="bi bi-box-arrow-up-right"></i></a
-                  ></em>
-                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Portfolio Section with Online Images and Direct Links -->
+      <!-- Portfolio Section with Detailed Projects -->
       <section id="portfolio" class="portfolio section light-background">
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
           <p>
-            Featured projects - Enterprise ERP systems, cross-platform mobile
-            apps, and innovative solutions.
+            Featured projects with complete details - technologies, features,
+            and links
           </p>
         </div>
         <div class="container">
@@ -608,242 +621,332 @@
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-erp">ERP</li>
               <li data-filter=".filter-app">Mobile Apps</li>
+              <li data-filter=".filter-ai">AI/ML</li>
             </ul>
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <!-- Yunusco ERP -->
+              <!-- Project 1: Yunusco ERP -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-erp"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=Yunusco+ERP"
-                    class="img-fluid"
                     alt="Yunusco ERP"
-                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
                     <h4>Yunusco ERP (2025)</h4>
-                    <p>
-                      End-to-end factory management system with QMS, Kanban
-                      production tracking
-                    </p>
+                    <div class="project-tech">
+                      Flutter | .NET Core | Riverpod | REST APIs | MSSQL
+                    </div>
+                    <div class="project-desc">
+                      End-to-end factory management system featuring automated
+                      approval workflows for purchasing/procurement, QMS, Kanban
+                      production tracking, employee performance monitoring, and
+                      real-time error analysis.
+                    </div>
+                    <ul class="project-features">
+                      <li>Automated approval pipelines for procurement</li>
+                      <li>
+                        Kanban production tracking with real-time dashboards
+                      </li>
+                      <li>
+                        Mobile dashboards for operators & TV displays for
+                        management
+                      </li>
+                      <li>
+                        Automated report generation with background services
+                      </li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://drive.google.com/drive/folders/1I5Brv0miZaMsvo7nuNQlWpqJlyuLR2Zw?usp=sharing"
                         target="_blank"
-                        >📁 Google Drive</a
-                      ><a href="https://www.yunusco.com/home" target="_blank"
-                        >🌐 Company</a
+                        ><i class="bi bi-google-drive"></i> Drive</a
+                      >
+                      <a href="https://www.yunusco.com/home" target="_blank"
+                        ><i class="bi bi-building"></i> Company</a
                       >
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Service Provider App -->
+              <!-- Project 2: Service Provider App -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=Service+Provider+App"
-                    class="img-fluid"
                     alt="Service Provider App"
-                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
                     <h4>Service Provider App (2024)</h4>
-                    <p>
-                      On-demand booking, live tracking, WebSocket messaging, AI
-                      camera
-                    </p>
+                    <div class="project-tech">
+                      Flutter | REST API | WebSocket | Firebase | Background
+                      Services
+                    </div>
+                    <div class="project-desc">
+                      On-demand service booking platform for home repairs,
+                      cleaning, and more with real-time tracking and live
+                      communication.
+                    </div>
+                    <ul class="project-features">
+                      <li>
+                        Real-time service provider tracking with live updates
+                      </li>
+                      <li>
+                        In-app messaging with WebSocket for instant
+                        communication
+                      </li>
+                      <li>
+                        AI-powered camera for service verification and
+                        documentation
+                      </li>
+                      <li>Secure payment processing with push notifications</li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://drive.google.com/drive/folders/15h4yANZGffja4nUi9ykJNcN5IxRLUsLv?usp=sharing"
                         target="_blank"
-                        >📁 Google Drive</a
+                        ><i class="bi bi-google-drive"></i> Drive</a
                       >
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Remit Money Transfer (Danesh Exchange) -->
+              <!-- Project 3: Remit Money Transfer (Danesh Exchange) -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=Remit+Money+Transfer"
-                    class="img-fluid"
                     alt="Remit Money Transfer"
-                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
                     <h4>Remit Money Transfer (2023)</h4>
-                    <p>
-                      Secure transfers from Australia to 70+ countries,
-                      biometric verification
-                    </p>
+                    <div class="project-tech">
+                      Flutter | REST API | Biometric | Tokenization | Map Search
+                    </div>
+                    <div class="project-desc">
+                      Secure and fast money transfer application from Australia
+                      to 70+ countries with enterprise-grade security.
+                    </div>
+                    <ul class="project-features">
+                      <li>Green ID/KYC verification for enhanced security</li>
+                      <li>
+                        Real-time exchange rate updates and transaction tracking
+                      </li>
+                      <li>
+                        Integrated map search for nearby agents and pickup
+                        locations
+                      </li>
+                      <li>Secure tokenization and biometric verification</li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://play.google.com/store/apps/details?id=com.remit.danesh_exchange&hl=en"
                         target="_blank"
-                        >📱 Play Store</a
-                      ><a
+                        ><i class="bi bi-google-play"></i> Play Store</a
+                      >
+                      <a
                         href="https://apps.apple.com/au/app/danesh-exchange/id6450658342"
                         target="_blank"
-                        >🍎 App Store</a
+                        ><i class="bi bi-apple"></i> App Store</a
                       >
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- PencilBox Training Institute -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="https://placehold.co/600x400/149ddd/white?text=PencilBox+Institute"
-                    class="img-fluid"
-                    alt="PencilBox"
-                    style="height: 220px; width: 100%; object-fit: cover"
-                  />
-                  <div class="portfolio-info">
-                    <h4>PencilBox Institute (2023)</h4>
-                    <p>
-                      E-commerce cart, AamarPay gateway, live streaming,
-                      Firebase FCM
-                    </p>
-                    <div class="project-links">
-                      <a
-                        href="https://play.google.com/store/apps/details?id=com.pencilbox.training&hl=en"
-                        target="_blank"
-                        >📱 Play Store</a
-                      ><a href="https://pencilbox.edu.bd/" target="_blank"
-                        >🌐 Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- MEC STUDY -->
+              <!-- Project 4: MEC STUDY -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=MEC+Study"
-                    class="img-fluid"
-                    alt="MEC Study"
-                    style="height: 220px; width: 100%; object-fit: cover"
+                    alt="MEC STUDY"
                   />
                   <div class="portfolio-info">
                     <h4>MEC STUDY (2024)</h4>
-                    <p>
-                      University application platform for Australia with course
-                      comparison, visa guidance
-                    </p>
+                    <div class="project-tech">
+                      Flutter | REST API | Push Notifications | Clean
+                      Architecture
+                    </div>
+                    <div class="project-desc">
+                      University application platform for Australia with smart
+                      animated UX and comprehensive student support features.
+                    </div>
+                    <ul class="project-features">
+                      <li>Course comparison and eligibility checks</li>
+                      <li>Document upload and application tracking</li>
+                      <li>Appointment booking with visa guidance</li>
+                      <li>Real-time updates with push notifications</li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://apps.apple.com/om/app/mec-study-group/id6664065651"
                         target="_blank"
-                        >🍎 App Store</a
+                        ><i class="bi bi-apple"></i> App Store</a
                       >
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- SONIC SOUND METER -->
+              <!-- Project 5: PencilBox Training Institute -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="https://placehold.co/600x400/149ddd/white?text=PencilBox+Institute"
+                    alt="PencilBox"
+                  />
+                  <div class="portfolio-info">
+                    <h4>PencilBox Training Institute (2023)</h4>
+                    <div class="project-tech">
+                      Flutter | E-commerce Cart | AamarPay | Firebase FCM | Live
+                      Streaming
+                    </div>
+                    <div class="project-desc">
+                      Comprehensive training institute management app with
+                      e-commerce functionality and live streaming.
+                    </div>
+                    <ul class="project-features">
+                      <li>E-commerce cart with AamarPay payment gateway</li>
+                      <li>Live data sync and customized animations</li>
+                      <li>Firebase Cloud Messaging for notifications</li>
+                      <li>Functional menus and course management system</li>
+                    </ul>
+                    <div class="project-links">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.pencilbox.training&hl=en"
+                        target="_blank"
+                        ><i class="bi bi-google-play"></i> Play Store</a
+                      >
+                      <a href="https://pencilbox.edu.bd/" target="_blank"
+                        ><i class="bi bi-globe"></i> Website</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 6: FUN LANGUAGE (AI-Powered) -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="https://placehold.co/600x400/149ddd/white?text=Fun+Language+AI"
+                    alt="Fun Language"
+                  />
+                  <div class="portfolio-info">
+                    <h4>FUN LANGUAGE (2024)</h4>
+                    <div class="project-tech">
+                      Flutter | GPT-3.5 | Firestore | Cloud Messaging | Riverpod
+                    </div>
+                    <div class="project-desc">
+                      AI-driven language learning application using GPT-3.5 for
+                      personalized learning experience.
+                    </div>
+                    <ul class="project-features">
+                      <li>
+                        AI-powered grammar correction and vocabulary quizzes
+                      </li>
+                      <li>Pronunciation practice with progress tracking</li>
+                      <li>Certifications, group chat, and social networking</li>
+                      <li>
+                        Posts and updates sharing within learning community
+                      </li>
+                    </ul>
+                    <div class="project-links">
+                      <a
+                        href="#"
+                        onclick="
+                          alert(
+                            'AI Language Learning App with GPT-3.5, Firestore, group chat features',
+                          )
+                        "
+                        ><i class="bi bi-info-circle"></i> Learn More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 7: SONIC SOUND METER -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=Sonic+Sound+Meter"
-                    class="img-fluid"
                     alt="Sonic Sound Meter"
-                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
                     <h4>SONIC SOUND METER (2023)</h4>
-                    <p>
-                      Real-time sound analysis, custom meters, Google Ads
-                      integration
-                    </p>
+                    <div class="project-tech">
+                      Flutter | Real-time Analysis | Google Ads | Custom Graphs
+                    </div>
+                    <div class="project-desc">
+                      Professional sound measurement application with real-time
+                      audio analysis and visualization.
+                    </div>
+                    <ul class="project-features">
+                      <li>Real-time sound analysis with custom meters</li>
+                      <li>Complex graphs for audio visualization</li>
+                      <li>All Google Ads variations for monetization</li>
+                      <li>Accurate decibel measurement</li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://play.google.com/store/apps/details?id=com.bitbirds.noise_meter&hl=en"
                         target="_blank"
-                        >📱 Play Store</a
+                        ><i class="bi bi-google-play"></i> Play Store</a
                       >
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- SPEED METER -->
+              <!-- Project 8: SPEED METER -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
                     src="https://placehold.co/600x400/149ddd/white?text=Speed+Meter"
-                    class="img-fluid"
                     alt="Speed Meter"
-                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
                     <h4>SPEED METER (2023)</h4>
-                    <p>
-                      GPS speed tracking, compass, live weather updates for
-                      travel
-                    </p>
+                    <div class="project-tech">
+                      Flutter | GPS | Location Services | Weather API | Compass
+                    </div>
+                    <div class="project-desc">
+                      Travel companion app featuring real-time GPS speed
+                      tracking and live weather updates.
+                    </div>
+                    <ul class="project-features">
+                      <li>Real-time GPS speed tracking</li>
+                      <li>Custom compass for accurate direction</li>
+                      <li>Live weather updates for trip planning</li>
+                      <li>Ideal for driving, navigation, and travel</li>
+                    </ul>
                     <div class="project-links">
                       <a
                         href="https://play.google.com/store/apps/details?id=com.bitbirds.speed_meter&hl=en"
                         target="_blank"
-                        >📱 Play Store</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Fun Language AI App -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="https://placehold.co/600x400/149ddd/white?text=Fun+Language+AI"
-                    class="img-fluid"
-                    alt="Fun Language"
-                    style="height: 220px; width: 100%; object-fit: cover"
-                  />
-                  <div class="portfolio-info">
-                    <h4>FUN LANGUAGE (2024)</h4>
-                    <p>
-                      AI-driven learning with GPT-3.5, grammar correction,
-                      social features
-                    </p>
-                    <div class="project-links">
-                      <a
-                        href="#"
-                        onclick="
-                          alert(
-                            'AI Language Learning App with GPT-3.5, Firestore, group chat',
-                          )
-                        "
-                        >Learn More</a
+                        ><i class="bi bi-google-play"></i> Play Store</a
                       >
                     </div>
                   </div>
@@ -858,10 +961,7 @@
       <section id="services" class="services section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
-          <p>
-            Comprehensive Flutter development services for businesses of all
-            sizes.
-          </p>
+          <p>What I offer as a Flutter & ERP Solutions Developer</p>
         </div>
         <div class="container">
           <div class="row gy-4">
@@ -872,66 +972,64 @@
               <div>
                 <h4 class="title">Cross-Platform App Development</h4>
                 <p class="description">
-                  iOS & Android apps with Flutter, consistent performance across
-                  platforms.
+                  iOS, Android, and desktop apps with Flutter ensuring
+                  consistent performance across all platforms.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
+                <i class="bi bi-building"></i>
               </div>
               <div>
                 <h4 class="title">ERP & Workflow Solutions</h4>
                 <p class="description">
                   Custom ERP systems for manufacturing, production tracking,
-                  QMS, KANBAN.
+                  QMS, KANBAN, and automated reporting.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 service-item d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
-              </div>
+              <div class="icon flex-shrink-0"><i class="bi bi-plug"></i></div>
               <div>
                 <h4 class="title">API Integration</h4>
                 <p class="description">
-                  RESTful APIs, WebSocket, Firebase, Supabase backend services.
+                  RESTful APIs, WebSocket real-time communication, Firebase, and
+                  Supabase backend services.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-binoculars"></i>
+                <i class="bi bi-graph-up"></i>
               </div>
               <div>
                 <h4 class="title">Real-time Features</h4>
                 <p class="description">
                   Live tracking, push notifications, real-time dashboards for
-                  TV/mobile.
+                  mobile and TV displays.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 service-item d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-brightness-high"></i>
-              </div>
+              <div class="icon flex-shrink-0"><i class="bi bi-rocket"></i></div>
               <div>
                 <h4 class="title">App Optimization</h4>
                 <p class="description">
-                  Performance tuning, debugging, and smooth user experience.
+                  Performance tuning, debugging, and ensuring smooth user
+                  experience with minimal resource usage.
                 </p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
-                <i class="bi bi-calendar4-week"></i>
+                <i class="bi bi-cloud-upload"></i>
               </div>
               <div>
                 <h4 class="title">Deployment & Maintenance</h4>
                 <p class="description">
-                  Play Store & App Store deployment, ongoing support and
-                  updates.
+                  Play Store & App Store deployment, ongoing maintenance,
+                  updates, and feature enhancements.
                 </p>
               </div>
             </div>
@@ -943,10 +1041,7 @@
       <section id="contact" class="contact section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>
-            Get in touch for collaborations, freelance projects, or job
-            opportunities.
-          </p>
+          <p>Let's work together!</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
@@ -956,7 +1051,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h3>Address</h3>
-                    <p>Shiddhirgonj Housing,Narayangonj</p>
+                    <p>SA Khaleq Abashik, Kollanpur, Dhaka, Bangladesh</p>
                   </div>
                 </div>
                 <div class="info-item d-flex">
@@ -1046,8 +1141,7 @@
           </p>
         </div>
         <div class="credits">
-          Designed with <i class="bi bi-heart-fill text-danger"></i> by Rafid |
-          iPortfolio Template
+          Flutter Developer | ERP Solutions Engineer | 4+ Years Experience
         </div>
       </div>
     </footer>
