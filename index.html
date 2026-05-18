@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Index - iPortfolio Bootstrap Template</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>Tawhidur Rahman Rafid - Flutter Developer Portfolio</title>
+    <meta
+      content="Flutter Developer Portfolio of Tawhidur Rahman Rafid - Mobile Application & ERP Solutions Engineer with 4+ years experience"
+      name="description"
+    />
+    <meta
+      content="Flutter, Dart, ERP, Mobile Developer, Rafid Tawhid"
+      name="keywords"
+    />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -38,13 +44,74 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <style>
+      /* Additional custom styles */
+      .portfolio-content {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .portfolio-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+      .project-links {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .project-links a {
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        background: var(--accent-color);
+        color: white;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .project-links a:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 20%);
+        color: white;
+      }
+      .company-link {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 14px;
+      }
+      .resume-item ul li {
+        margin-bottom: 8px;
+      }
+      .hero h2 {
+        font-size: 48px;
+      }
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 28px;
+        }
+        .hero p {
+          font-size: 18px;
+        }
+      }
+      .cert-badge {
+        background: var(--accent-color);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 25px;
+        font-size: 12px;
+        display: inline-block;
+        margin-top: 8px;
+      }
+      .cert-badge a {
+        color: white;
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -52,34 +119,49 @@
       <i class="header-toggle d-xl-none bi bi-list"></i>
 
       <div class="profile-img">
-        <img src="assets/img/dpp.jpg" alt="" class="img-fluid rounded-circle" />
+        <img
+          src="assets/img/dpp.jpg"
+          alt="Tawhidur Rahman Rafid"
+          class="img-fluid rounded-circle"
+        />
       </div>
 
       <a
         href="index.html"
         class="logo d-flex align-items-center justify-content-center"
       >
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Rafid Tawhid</h1>
       </a>
 
       <div class="social-links text-center">
-        <a href="https://github.com/Rafid-tawhid" class="twitter"
+        <a
+          href="https://github.com/Rafid-tawhid"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bi bi-github"></i
         ></a>
-        <a href="https://www.facebook.com/RAFI5D/" class="facebook"
+        <a
+          href="https://www.facebook.com/RAFI5D/"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bi bi-facebook"></i
         ></a>
-        <a href="https://wa.me/01682832598" class="facebook"
+        <a
+          href="https://wa.me/8801682832598"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bi bi-whatsapp"></i
         ></a>
-        <a href="https://join.skype.com/invite/r08TlCJmjogh" class="google-plus"
+        <a
+          href="https://join.skype.com/invite/r08TlCJmjogh"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bi bi-skype"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/tawhidur-rahman-rafid-5a6b75175/"
-          class="linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bi bi-linkedin"></i
         ></a>
       </div>
@@ -109,31 +191,6 @@
               ><i class="bi bi-hdd-stack navicon"></i> Services</a
             >
           </li>
-          <li class="dropdown">
-            <a href="#"
-              ><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown">
-                <a href="#"
-                  ><span>Deep Dropdown</span>
-                  <i class="bi bi-chevron-down toggle-dropdown"></i
-                ></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li>
             <a href="#contact"
               ><i class="bi bi-envelope navicon"></i> Contact</a
@@ -146,19 +203,14 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/bg.jpg" alt="" data-aos="fade-in" class="" />
-
+        <img src="assets/img/bg.jpg" alt="Background" data-aos="fade-in" />
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <h2>Tawhidur Rahman Rafid</h2>
           <p>
             I'm
             <span
               class="typed"
-              data-typed-items="Flutter Developer, Software Engineer, Freelancer, Database Designer"
-              >Designer</span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
+              data-typed-items="Flutter Developer, Software Engineer, ERP Solutions Architect, Mobile App Specialist"
             ></span
             ><span
               class="typed-cursor typed-cursor--blink"
@@ -167,35 +219,35 @@
           </p>
         </div>
       </section>
-      <!-- /Hero Section -->
 
       <!-- About Section -->
       <section id="about" class="about section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>About</h2>
           <p>
-            I am passionate about exploring cutting-edge technologies and
-            software, with a particular love for creating mobile applications
-            using Flutter. I pride myself on being adaptable and resilient,
-            always ready to tackle any challenge. Honesty is my guiding
-            principle, and I believe it is the foundation of lasting success.
+            Mobile Application & ERP Solutions Engineer with 4+ years of
+            experience developing scalable Flutter applications, enterprise ERP
+            systems, and manufacturing workflow automation solutions. Passionate
+            about clean architecture and solving complex business challenges.
           </p>
         </div>
-        <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
             <div class="col-lg-4">
-              <img src="assets/img/hero.jpg" class="img-fluid" alt="" />
+              <img
+                src="assets/img/hero.jpg"
+                class="img-fluid"
+                alt="Rafid Profile"
+              />
             </div>
             <div class="col-lg-8 content">
-              <h2>Software Engineer &amp; Flutter Developer.</h2>
+              <h2>Software Engineer &amp; Flutter Developer</h2>
               <p class="fst-italic py-3">
-                Skilled Flutter developer with 3+ years of experience creating
-                efficient, cross-platform mobile applications. Proficient in
-                Dart, Provider state management, and Firebase integration.
-                Dedicated to delivering high-quality, user-friendly solutions.
+                Skilled Flutter developer with 4+ years of experience creating
+                efficient, cross-platform mobile applications and ERP systems.
+                Proficient in Dart, Riverpod, Firebase, Supabase, and .NET Core
+                API integration.
               </p>
               <div class="row">
                 <div class="col-lg-6">
@@ -206,20 +258,19 @@
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Website:</strong>
+                      <strong>GitHub:</strong>
                       <a href="https://github.com/Rafid-tawhid" target="_blank"
-                        >Visit my Github <i class="bi bi-box-arrow-up-right"></i
+                        >github.com/Rafid-tawhid
+                        <i class="bi bi-box-arrow-up-right"></i
                       ></a>
-                      <span></span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
                       <strong>Phone:</strong> <span>+880 1682832598</span>
                     </li>
                     <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>City:</strong>
-                      <span>Mirpur, Dhaka, Bangladesh</span>
+                      <i class="bi bi-chevron-right"></i> <strong>City:</strong>
+                      <span>Dhaka, Bangladesh</span>
                     </li>
                   </ul>
                 </div>
@@ -227,11 +278,11 @@
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                      <span>28</span>
+                      <span>27</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong> <span>Msc in CSE</span>
+                      <strong>Degree:</strong> <span>MSc in CSE</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
@@ -248,18 +299,15 @@
               <p class="py-3">
                 As a Flutter developer, my goal is to create seamless,
                 high-performance, and visually appealing cross-platform
-                applications that enhance user experiences. I aim to stay
-                updated with the latest Flutter advancements, refine my coding
-                skills, and contribute to building scalable and innovative
-                solutions. My focus is on delivering efficient, maintainable
-                code while continuously learning and improving to meet both user
-                needs and business objectives.
+                applications that enhance user experiences. I focus on
+                delivering efficient, maintainable code while continuously
+                learning and improving to meet both user needs and business
+                objectives.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- /About Section -->
 
       <!-- Stats Section -->
       <section id="stats" class="stats section">
@@ -267,347 +315,284 @@
           <div class="row gy-4">
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
-                <i class="bi bi-emoji-smile"></i>
-                <span
+                <i class="bi bi-emoji-smile"></i
+                ><span
                   data-purecounter-start="0"
                   data-purecounter-end="20"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>
-                  <strong>Happy Clients</strong>
-                  <span>Market place and Local</span>
-                </p>
+                <p><strong>Happy Clients</strong> <span>Worldwide</span></p>
               </div>
             </div>
-            <!-- End Stats Item -->
-
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
-                <i class="bi bi-journal-richtext"></i>
-                <span
+                <i class="bi bi-journal-richtext"></i
+                ><span
                   data-purecounter-start="0"
-                  data-purecounter-end="30"
+                  data-purecounter-end="35"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p><strong>Projects</strong> <span>Completed</span></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-headset"></i
+                ><span
+                  data-purecounter-start="0"
+                  data-purecounter-end="2000"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
                 <p>
-                  <strong>Projects</strong>
-                  <span>Personal, Local & International</span>
+                  <strong>Hours Of Support</strong> <span>For Clients</span>
                 </p>
               </div>
             </div>
-            <!-- End Stats Item -->
-
             <div class="col-lg-3 col-md-6">
               <div class="stats-item">
-                <i class="bi bi-headset"></i>
-                <span
+                <i class="bi bi-people"></i
+                ><span
                   data-purecounter-start="0"
-                  data-purecounter-end="1453"
+                  data-purecounter-end="4"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>
-                  <strong>Hours Of Support</strong>
-                  <span>Online and Offline</span>
-                </p>
+                <p><strong>Years Experience</strong> <span>In Flutter</span></p>
               </div>
             </div>
-            <!-- End Stats Item -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item">
-                <i class="bi bi-people"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="3200"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><strong>Hard Workers</strong> <span>Dollar Income</span></p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
           </div>
         </div>
       </section>
-      <!-- /Stats Section -->
 
       <!-- Skills Section -->
       <section id="skills" class="skills section light-background">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Skills</h2>
           <p>
-            Dart Programming: Proficiency in Dart, the language behind Flutter.
-            UI/UX Design: Building responsive, aesthetic, and cross-platform
-            UIs. State Management: Expertise in tools like Provider, Riverpod,
-            or Bloc. API Integration: Consuming RESTful APIs and handling JSON
-            data. Firebase: Familiarity with Firebase Authentication, Firestore,
-            and cloud services. Debugging: Strong problem-solving and debugging
-            skills using tools like DevTools. Version Control: Proficiency in
-            Git for code management. Native Platform Knowledge: Basic
-            understanding of Android and iOS for platform-specific features.
-            Performance Optimization: Ensuring smooth, efficient app
-            performance.
+            Proficiency in Flutter, Dart, state management, REST API
+            integration, Firebase, and backend technologies.
           </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row skills-content skills-animation">
             <div class="col-lg-6">
               <div class="progress">
                 <span class="skill"
-                  ><span>Flutter</span> <i class="val">80%</i></span
+                  ><span>Flutter & Dart</span> <i class="val">90%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+                  <div class="progress-bar" style="width: 90%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
-
               <div class="progress">
                 <span class="skill"
-                  ><span>Dart</span> <i class="val">80%</i></span
+                  ><span>REST APIs & WebSocket</span>
+                  <i class="val">85%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="80"
-                  ></div>
+                  <div class="progress-bar" style="width: 85%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
-
               <div class="progress">
                 <span class="skill"
-                  ><span>Rest Api</span> <i class="val">75%</i></span
+                  ><span>Firebase & Supabase</span> <i class="val">80%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+                  <div class="progress-bar" style="width: 80%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
             </div>
-
             <div class="col-lg-6">
               <div class="progress">
                 <span class="skill"
-                  ><span>Firebase</span> <i class="val">70%</i></span
+                  ><span>State Management (Riverpod/Provider)</span>
+                  <i class="val">85%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="70"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+                  <div class="progress-bar" style="width: 85%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
-
               <div class="progress">
                 <span class="skill"
-                  ><span>Database</span> <i class="val">60%</i></span
+                  ><span>.NET Core API</span> <i class="val">75%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="60"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+                  <div class="progress-bar" style="width: 75%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
-
               <div class="progress">
                 <span class="skill"
-                  ><span>UI Design</span> <i class="val">90%</i></span
+                  ><span>UI/UX Design</span> <i class="val">85%</i></span
                 >
                 <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+                  <div class="progress-bar" style="width: 85%"></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
             </div>
           </div>
         </div>
       </section>
-      <!-- /Skills Section -->
 
-      <!-- Resume Section -->
+      <!-- Resume Section with Company Links -->
       <section id="resume" class="resume section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
           <p>
-            I am passionate about exploring cutting-edge technologies and
-            software, with a particular love for creating mobile applications
-            using Flutter. I pride myself on being adaptable and resilient,
-            always ready to tackle any challenge. Honesty is my guiding
-            principle, and I believe it is the foundation of lasting success.
+            4+ years of experience in Flutter development, ERP solutions, and
+            mobile application architecture.
           </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container">
           <div class="row">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Sumary</h3>
-
+              <h3 class="resume-title">Summary</h3>
               <div class="resume-item pb-0">
                 <h4>Tawhidur Rahman Rafid</h4>
                 <p>
                   <em
-                    >A skilled Flutter Developer with a strong foundation in
-                    cross-platform mobile app development, proficient in
-                    creating seamless, high-performance applications for both
-                    Android and iOS. Adept at implementing clean, responsive UI
-                    designs, state management solutions like Provider, Riverpod,
-                    or Bloc, and integrating REST APIs and Firebase for dynamic,
-                    real-time features. Passionate about delivering robust,
-                    scalable, and user-focused applications, with experience in
-                    debugging, optimizing performance, and deploying apps to the
-                    Play Store and App Store. Committed to staying updated with
-                    the latest Flutter advancements and best practices.</em
+                    >Experienced Flutter Developer and ERP Solutions Engineer
+                    with a strong track record of delivering high-performance
+                    mobile apps and enterprise workflow automation systems.</em
                   >
                 </p>
               </div>
-              <!-- Edn Resume Item -->
-
               <h3 class="resume-title">Education</h3>
               <div class="resume-item">
-                <h4>Msc in CSE</h4>
-                <h5>2022-2024</h5>
+                <h4>MSc in Computer Science & Engineering</h4>
+                <h5>2022 - 2024</h5>
                 <p><em>Jagannath University, Dhaka</em></p>
-                <p>
-                  The MSc in CSE program at Jagannath University (JNU) offers
-                  advanced education in computer science, focusing on
-                  cutting-edge technologies and research. The program is
-                  designed to equip students with in-depth knowledge in areas
-                  like artificial intelligence, data science, and software
-                  engineering. With experienced faculty and modern facilities,
-                  it prepares graduates for careers in academia, industry, and
-                  innovation
-                </p>
+                <p>CGPA: 3.00</p>
               </div>
-              <!-- Edn Resume Item -->
-
               <div class="resume-item">
-                <h4>Bsc in CSE</h4>
-                <h5>2016-2021</h5>
+                <h4>BSc in Computer Science & Engineering</h4>
+                <h5>2016 - 2020</h5>
                 <p><em>Stamford University Bangladesh</em></p>
+                <p>CGPA: 3.70</p>
+              </div>
+              <div class="resume-item">
+                <h4>Certifications</h4>
                 <p>
-                  The BSc in CSE program at Stamfor University Bangladesh (SUB)
-                  provides a comprehensive foundation in computer science and
-                  engineering. It emphasizes practical learning through modern
-                  labs, programming, and project-based courses. With experienced
-                  faculty and industry-focused curricula, the program prepares
-                  students for dynamic careers in technology and innovation.
+                  • Oracle Certified Professional (OCP) Java SE8 (2020)<br />
+                  • <strong>Level-4 Certified Trainer</strong> -
+                  <a
+                    href="https://drive.google.com/file/d/1sKuqkN4pKd4IGnbDW_y-jlVXzuAaHZ3a/view?usp=sharing"
+                    target="_blank"
+                    >View Certificate <i class="bi bi-box-arrow-up-right"></i
+                  ></a>
                 </p>
               </div>
-              <!-- Edn Resume Item -->
             </div>
-
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <h3 class="resume-title">Professional Experience</h3>
               <div class="resume-item">
-                <h4>Senior Flutter Developer</h4>
-                <h5>2023 - Present</h5>
-                <p><em>WEMPRO, Dhaka </em></p>
+                <h4>Mobile Application Developer & ERP Solutions</h4>
+                <h5>Apr 2025 - Present</h5>
+                <p>
+                  <em
+                    ><a href="https://www.yunusco.com/home" target="_blank"
+                      >Yunusco BD Ltd
+                      <i class="bi bi-box-arrow-up-right"></i></a
+                  ></em>
+                </p>
                 <ul>
                   <li>
-                    Lead Designing and developing high-quality, scalable, and
-                    maintainable Flutter applications with clean coding
-                    practices and modular architecture.
+                    Designing scalable Flutter-based ERP systems for
+                    manufacturing workflows
                   </li>
                   <li>
-                    Mentoring junior developers, conducting code reviews, and
-                    ensuring adherence to development standards within the team.
+                    Building RESTful APIs using .NET Core for real-time data
+                    processing
                   </li>
                   <li>
-                    Optimizing applications for Android and iOS platforms to
-                    ensure seamless performance and an excellent user
-                    experience.
-                  </li>
-                  <li>
-                    Collaborating with backend teams to integrate APIs, manage
-                    state effectively, and ensure smooth communication between
-                    the app and server-side services.
+                    Leading end-to-end workflow digitization and system
+                    optimization
                   </li>
                 </ul>
               </div>
-              <!-- Edn Resume Item -->
-
               <div class="resume-item">
-                <h4>Flutter Developer and Trainer</h4>
-                <h5>2022-2023</h5>
-                <p><em>Bitbirds Solutions</em></p>
+                <h4>Software Engineer – Flutter</h4>
+                <h5>Nov 2023 - Mar 2025</h5>
+                <p>
+                  <em
+                    ><a href="https://www.wempro.com/" target="_blank"
+                      >Wempro Software
+                      <i class="bi bi-box-arrow-up-right"></i></a
+                  ></em>
+                </p>
                 <ul>
                   <li>
-                    Skilled in building cross-platform mobile apps with
-                    responsive UI, API integration, and state management using
-                    Provider and Riverpod.
+                    Built high-performance mobile apps with real-time tracking
+                    and push notifications
                   </li>
                   <li>
-                    Experienced in mentoring and guiding aspiring developers
-                    with hands-on training and real-world Flutter practices.
-                  </li>
-                  <li>
-                    Adept at debugging, optimizing app performance, and staying
-                    updated with the latest Flutter trends and technologies.
+                    Integrated Firebase, REST APIs, WebSocket for enhanced
+                    scalability
                   </li>
                 </ul>
               </div>
-              <!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>Flutter Developer</h4>
+                <h5>Sep 2022 - Oct 2023</h5>
+                <p>
+                  <em
+                    ><a href="https://bitbirds.com/" target="_blank"
+                      >BitBirds Solution
+                      <i class="bi bi-box-arrow-up-right"></i></a
+                  ></em>
+                </p>
+                <ul>
+                  <li>Developed professional apps with clean architecture</li>
+                  <li>
+                    Solved complex technical challenges for improved user
+                    experience
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Assistant Trainer (SEIP Project)</h4>
+                <h5>Sep 2021 - Oct 2022</h5>
+                <p>
+                  <em
+                    ><a href="https://pencilbox.edu.bd/" target="_blank"
+                      >PencilBox Training Center
+                      <i class="bi bi-box-arrow-up-right"></i></a
+                  ></em>
+                </p>
+                <ul>
+                  <li>
+                    Conducted hands-on training on Flutter and Android for 200+
+                    students
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Intern – Java Mobile Developer</h4>
+                <h5>Mar 2021 - Jun 2021</h5>
+                <p>
+                  <em
+                    ><a href="https://appatlantis.tech/" target="_blank"
+                      >App Atlantis Co
+                      <i class="bi bi-box-arrow-up-right"></i></a
+                  ></em>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Resume Section -->
 
-      <!-- Portfolio Section -->
+      <!-- Portfolio Section with Online Images and Direct Links -->
       <section id="portfolio" class="portfolio section light-background">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
           <p>
-            I am a dedicated Flutter developer with over three years of
-            professional experience in creating cross-platform mobile
-            applications. My expertise lies in developing high-performance,
-            scalable apps while integrating advanced features to ensure seamless
-            user experiences. I am passionate about coding and committed to
-            continuous learning and improvement.
+            Featured projects - Enterprise ERP systems, cross-platform mobile
+            apps, and innovative solutions.
           </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container">
           <div
             class="isotope-layout"
@@ -620,834 +605,435 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <li data-filter=".filter-app">App</li>
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-erp">ERP</li>
+              <li data-filter=".filter-app">Mobile Apps</li>
             </ul>
-            <!-- End Portfolio Filters -->
-
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
               data-aos-delay="200"
             >
+              <!-- Yunusco ERP -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/erp.png" class="img-fluid" alt="" />
-                  <div class="portfolio-info">
-                    <h4>ERP Solutions</h4>
-                    <p>Converting a garments solution in Mobile App</p>
-                    <a
-                      href="assets/img/portfolio/erp.jpg"
-                      title="ERP Solutions"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                    ></a>
-                    <a
-                      href="projects/erp.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-erp"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/mec.png"
+                    src="https://placehold.co/600x400/149ddd/white?text=Yunusco+ERP"
                     class="img-fluid"
-                    alt=""
+                    alt="Yunusco ERP"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>MEC Study International</h4>
+                    <h4>Yunusco ERP (2025)</h4>
                     <p>
-                      International app for student councelling for studying
-                      abroad
+                      End-to-end factory management system with QMS, Kanban
+                      production tracking
                     </p>
-                    <a
-                      href="assets/img/portfolio/mec.png"
-                      title="MEC Study International"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <div class="project-links">
+                      <a
+                        href="https://drive.google.com/drive/folders/1I5Brv0miZaMsvo7nuNQlWpqJlyuLR2Zw?usp=sharing"
+                        target="_blank"
+                        >📁 Google Drive</a
+                      ><a href="https://www.yunusco.com/home" target="_blank"
+                        >🌐 Company</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/branding-1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="portfolio-info">
-                    <h4>Branding 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/branding-1.jpg"
-                      title="Branding 1"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/books-1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="portfolio-info">
-                    <h4>Books 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/books-1.jpg"
-                      title="Branding 1"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
+              <!-- Service Provider App -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/app-2.jpg"
+                    src="https://placehold.co/600x400/149ddd/white?text=Service+Provider+App"
                     class="img-fluid"
-                    alt=""
+                    alt="Service Provider App"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>App 2</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/app-2.jpg"
-                      title="App 2"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <h4>Service Provider App (2024)</h4>
+                    <p>
+                      On-demand booking, live tracking, WebSocket messaging, AI
+                      camera
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://drive.google.com/drive/folders/15h4yANZGffja4nUi9ykJNcN5IxRLUsLv?usp=sharing"
+                        target="_blank"
+                        >📁 Google Drive</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/product-2.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="portfolio-info">
-                    <h4>Product 2</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/product-2.jpg"
-                      title="Product 2"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/branding-2.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="portfolio-info">
-                    <h4>Branding 2</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/branding-2.jpg"
-                      title="Branding 2"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/books-2.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                  <div class="portfolio-info">
-                    <h4>Books 2</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/books-2.jpg"
-                      title="Branding 2"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
+              <!-- Remit Money Transfer (Danesh Exchange) -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/app-3.jpg"
+                    src="https://placehold.co/600x400/149ddd/white?text=Remit+Money+Transfer"
                     class="img-fluid"
-                    alt=""
+                    alt="Remit Money Transfer"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>App 3</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/app-3.jpg"
-                      title="App 3"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <h4>Remit Money Transfer (2023)</h4>
+                    <p>
+                      Secure transfers from Australia to 70+ countries,
+                      biometric verification
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.remit.danesh_exchange&hl=en"
+                        target="_blank"
+                        >📱 Play Store</a
+                      ><a
+                        href="https://apps.apple.com/au/app/danesh-exchange/id6450658342"
+                        target="_blank"
+                        >🍎 App Store</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
 
+              <!-- PencilBox Training Institute -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/product-3.jpg"
+                    src="https://placehold.co/600x400/149ddd/white?text=PencilBox+Institute"
                     class="img-fluid"
-                    alt=""
+                    alt="PencilBox"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>Product 3</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/product-3.jpg"
-                      title="Product 3"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <h4>PencilBox Institute (2023)</h4>
+                    <p>
+                      E-commerce cart, AamarPay gateway, live streaming,
+                      Firebase FCM
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.pencilbox.training&hl=en"
+                        target="_blank"
+                        >📱 Play Store</a
+                      ><a href="https://pencilbox.edu.bd/" target="_blank"
+                        >🌐 Website</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
 
+              <!-- MEC STUDY -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/branding-3.jpg"
+                    src="https://placehold.co/600x400/149ddd/white?text=MEC+Study"
                     class="img-fluid"
-                    alt=""
+                    alt="MEC Study"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>Branding 3</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/branding-3.jpg"
-                      title="Branding 2"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <h4>MEC STUDY (2024)</h4>
+                    <p>
+                      University application platform for Australia with course
+                      comparison, visa guidance
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://apps.apple.com/om/app/mec-study-group/id6664065651"
+                        target="_blank"
+                        >🍎 App Store</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
 
+              <!-- SONIC SOUND METER -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
                 <div class="portfolio-content h-100">
                   <img
-                    src="assets/img/portfolio/books-3.jpg"
+                    src="https://placehold.co/600x400/149ddd/white?text=Sonic+Sound+Meter"
                     class="img-fluid"
-                    alt=""
+                    alt="Sonic Sound Meter"
+                    style="height: 220px; width: 100%; object-fit: cover"
                   />
                   <div class="portfolio-info">
-                    <h4>Books 3</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/portfolio/books-3.jpg"
-                      title="Branding 3"
-                      data-gallery="portfolio-gallery-book"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      title="More Details"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <h4>SONIC SOUND METER (2023)</h4>
+                    <p>
+                      Real-time sound analysis, custom meters, Google Ads
+                      integration
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.bitbirds.noise_meter&hl=en"
+                        target="_blank"
+                        >📱 Play Store</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+
+              <!-- SPEED METER -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="https://placehold.co/600x400/149ddd/white?text=Speed+Meter"
+                    class="img-fluid"
+                    alt="Speed Meter"
+                    style="height: 220px; width: 100%; object-fit: cover"
+                  />
+                  <div class="portfolio-info">
+                    <h4>SPEED METER (2023)</h4>
+                    <p>
+                      GPS speed tracking, compass, live weather updates for
+                      travel
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.bitbirds.speed_meter&hl=en"
+                        target="_blank"
+                        >📱 Play Store</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fun Language AI App -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="https://placehold.co/600x400/149ddd/white?text=Fun+Language+AI"
+                    class="img-fluid"
+                    alt="Fun Language"
+                    style="height: 220px; width: 100%; object-fit: cover"
+                  />
+                  <div class="portfolio-info">
+                    <h4>FUN LANGUAGE (2024)</h4>
+                    <p>
+                      AI-driven learning with GPT-3.5, grammar correction,
+                      social features
+                    </p>
+                    <div class="project-links">
+                      <a
+                        href="#"
+                        onclick="
+                          alert(
+                            'AI Language Learning App with GPT-3.5, Firestore, group chat',
+                          )
+                        "
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- End Portfolio Container -->
           </div>
         </div>
       </section>
-      <!-- /Portfolio Section -->
 
       <!-- Services Section -->
       <section id="services" class="services section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
           <p>
-            As a Flutter Developer, I offer comprehensive services including
-            cross-platform app development, creating beautiful and responsive
-            UI/UX designs, and implementing efficient state management
-            solutions. I specialize in API integration, app optimization, and
-            provide ongoing maintenance to ensure smooth, high-performance
-            applications. With expertise in both Android and iOS development, I
-            also manage app deployment to app stores, delivering top-quality
-            solutions to meet your business needs.
+            Comprehensive Flutter development services for businesses of all
+            sizes.
           </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container">
           <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-briefcase"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >Cross-Platform App Development</a
-                  >
-                </h4>
+                <h4 class="title">Cross-Platform App Development</h4>
                 <p class="description">
-                  Build mobile apps for both Android and iOS using Flutter,
-                  ensuring consistent performance and user experience across
+                  iOS & Android apps with Flutter, consistent performance across
                   platforms.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-card-checklist"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >UI/UX Design and Development</a
-                  >
-                </h4>
+                <h4 class="title">ERP & Workflow Solutions</h4>
                 <p class="description">
-                  Design and develop beautiful, responsive, and user-friendly
-                  interfaces for mobile applications, following best practices
-                  in Flutter.
+                  Custom ERP systems for manufacturing, production tracking,
+                  QMS, KANBAN.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-bar-chart"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >State Management Solutions</a
-                  >
-                </h4>
+                <h4 class="title">API Integration</h4>
                 <p class="description">
-                  Implement state management in Flutter using tools like
-                  Provider, Riverpod, Bloc, or GetX to create scalable and
-                  maintainable applications.
+                  RESTful APIs, WebSocket, Firebase, Supabase backend services.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-binoculars"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >API Integration and Backend Services</a
-                  >
-                </h4>
+                <h4 class="title">Real-time Features</h4>
                 <p class="description">
-                  Integrate third-party APIs for features like payments,
-                  notifications, or real-time data synchronization using
-                  Firebase or other backend technologies.
+                  Live tracking, push notifications, real-time dashboards for
+                  TV/mobile.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-brightness-high"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >App Optimization and Debugging</a
-                  >
-                </h4>
+                <h4 class="title">App Optimization</h4>
                 <p class="description">
-                  Optimize app performance, resolve bugs, and ensure smooth
-                  functioning with minimal loading times and resource
-                  consumption.
+                  Performance tuning, debugging, and smooth user experience.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
+            <div class="col-lg-4 col-md-6 service-item d-flex">
               <div class="icon flex-shrink-0">
                 <i class="bi bi-calendar4-week"></i>
               </div>
               <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >App Deployment and Maintenance</a
-                  >
-                </h4>
+                <h4 class="title">Deployment & Maintenance</h4>
                 <p class="description">
-                  Manage app deployment to the Play Store and App Store, and
-                  provide ongoing maintenance, updates, and feature
-                  enhancements.
+                  Play Store & App Store deployment, ongoing support and
+                  updates.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
           </div>
         </div>
       </section>
-      <!-- /Services Section -->
-
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="testimonials section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
-          <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 1
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Proin iaculis purus consequat sem cure digni ssim donec
-                      porttitora entum suscipit rhoncus. Accusantium quam,
-                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                      risus at semper.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Export tempor illum tamen malis malis eram quae irure
-                      esse labore quem cillum quid malis quorum velit fore eram
-                      velit sunt aliqua noster fugiat irure amet legam anim
-                      culpa.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-2.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Enim nisi quem export duis labore cillum quae magna enim
-                      sint quorum nulla quem veniam duis minim tempor labore
-                      quem eram duis noster aute amet eram fore quis sint
-                      minim.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-3.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Fugiat enim eram quae cillum dolore dolor amet nulla
-                      culpa multos export minim fugiat dolor enim duis veniam
-                      ipsum anim magna sunt elit fore quem dolore labore illum
-                      veniam.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-4.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Quis quorum aliqua sint quem legam fore sunt eram irure
-                      aliqua veniam tempor noster veniam sunt culpa nulla illum
-                      cillum fugiat legam esse veniam culpa fore nisi cillum
-                      quid.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-5.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- /Testimonials Section -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>Flutter Developer | Cross-Platform Mobile App Specialist</p>
+          <p>
+            Get in touch for collaborations, freelance projects, or job
+            opportunities.
+          </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
             <div class="col-lg-5">
               <div class="info-wrap">
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
+                <div class="info-item d-flex">
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h3>Address</h3>
-                    <p>SA Khaleq Abashik, Kollanpur, Dhaka, Bangladesh</p>
+                    <p>Shiddhirgonj Housing,Narayangonj</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
-
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
+                <div class="info-item d-flex">
                   <i class="bi bi-telephone flex-shrink-0"></i>
                   <div>
-                    <h3>Call Us</h3>
-                    <p>+=88 01682832598</p>
+                    <h3>Call Me</h3>
+                    <p>+880 1682832598</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
-
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
+                <div class="info-item d-flex">
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
-                    <h3>Email Us</h3>
+                    <h3>Email</h3>
                     <p>rafidtawhid01@gmail.com</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
-
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902!2d90.363!3d23.763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c8c7b2b8a1%3A0x0!2zMjPCsDQ1JzQ2LjgiTiA5MMKwMjEnNDYuOCJF!5e0!3m2!1sen!2sbd!4v1700000000000"
                   frameborder="0"
                   style="border: 0; width: 100%; height: 270px"
                   allowfullscreen=""
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
             </div>
-
             <div class="col-lg-7">
               <form
                 action="forms/contact.php"
                 method="post"
                 class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
               >
                 <div class="row gy-4">
                   <div class="col-md-6">
-                    <label for="name-field" class="pb-2">Your Name</label>
-                    <input
+                    <label class="pb-2">Your Name</label
+                    ><input
                       type="text"
                       name="name"
-                      id="name-field"
                       class="form-control"
-                      required=""
+                      required
                     />
                   </div>
-
                   <div class="col-md-6">
-                    <label for="email-field" class="pb-2">Your Email</label>
-                    <input
+                    <label class="pb-2">Your Email</label
+                    ><input
                       type="email"
-                      class="form-control"
                       name="email"
-                      id="email-field"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="subject-field" class="pb-2">Subject</label>
-                    <input
-                      type="text"
                       class="form-control"
-                      name="subject"
-                      id="subject-field"
-                      required=""
+                      required
                     />
                   </div>
-
                   <div class="col-md-12">
-                    <label for="message-field" class="pb-2">Message</label>
-                    <textarea
+                    <label class="pb-2">Subject</label
+                    ><input
+                      type="text"
+                      name="subject"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="pb-2">Message</label
+                    ><textarea
                       class="form-control"
                       name="message"
-                      rows="10"
-                      id="message-field"
-                      required=""
+                      rows="6"
+                      required
                     ></textarea>
                   </div>
-
                   <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
                     <button type="submit">Send Message</button>
                   </div>
                 </div>
               </form>
             </div>
-            <!-- End Contact Form -->
           </div>
         </div>
       </section>
-      <!-- /Contact Section -->
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
@@ -1455,23 +1041,16 @@
         <div class="copyright text-center">
           <p>
             © <span>Copyright</span>
-            <strong class="px-1 sitename">iPortfolio</strong>
+            <strong class="px-1">Tawhidur Rahman Rafid</strong>
             <span>All Rights Reserved</span>
           </p>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by
-          <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by
-          <a href="https://themewagon.com">ThemeWagon</a>
+          Designed with <i class="bi bi-heart-fill text-danger"></i> by Rafid |
+          iPortfolio Template
         </div>
       </div>
     </footer>
-
-    <!-- Scroll Top -->
 
     <a
       href="#"
@@ -1479,8 +1058,6 @@
       class="scroll-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
-
-    <!-- Preloader -->
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
@@ -1489,13 +1066,10 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
